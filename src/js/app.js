@@ -349,7 +349,7 @@
     var isActive;
     state = issue.state;
     isActive = issue.labels.filter(function(label) {
-      return label.name === 'active';
+      return label.name === 'active' || label.name === 'in progress';
     }).length === 1;
     if (isActive) {
       state = 'active';
